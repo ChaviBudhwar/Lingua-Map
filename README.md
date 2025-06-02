@@ -25,3 +25,4 @@ I created Lingua Map to practice my HTML and CSS skills, learn more about these 
 
 ## 📝 P.S.:
 Since there were a lot of pages to create (two for each region), and I had a deadline, I used **ChatGPT** to help with some of the repetitive coding tasks. This project helped me combine creativity with coding and languages, and it's a milestone in my learning journey!
+The site still contains many bugs, issues that need fixing and improvements are necessary.
