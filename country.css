@@ -1,0 +1,333 @@
+html, body {
+    margin: 0;
+  padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    scroll-snap-type: y mandatory; 
+    overflow-y: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 2.5rem;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 3000;
+}
+  
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#navbar a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+  
+#country li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#about li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navbar li:hover {
+    background-color: #FCD34D;
+    border-radius: 2px;
+    color: black;
+}
+
+#language {
+    position: relative;
+    right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block; 
+    z-index: 4000;
+}
+
+#language ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#language ul a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#language ul #ita {
+    top: 40px;
+}
+
+#language ul a:not(:first-child) {
+    display: none;
+    position: absolute;
+    width: 50px;
+    background-color: gray;
+    z-index: 2000;
+}
+
+#language:hover ul a{
+    display: block;
+    z-index: 2000;
+}
+
+#language ul a:hover {
+    background-color: #FCD34D;
+    border-radius: 2px;
+    color: black;
+}
+
+h1 {
+    
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+    font-size: 25px;
+}
+
+p{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#cuisine ul{
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#grid{
+    height: 168vh;
+    display: grid;
+    grid-template-columns: 28.5vw 28.5vw 29vw;
+    grid-template-rows: 14vh 50vh 22vh 16vh 45vh 30vh;
+    gap: 1rem;
+    margin: 1rem;
+    margin-top: 3.5rem;
+} 
+
+#map{
+    border: 10px solid #6ee7b7;
+    border-radius: 10px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    position: fixed;
+    right: 1rem;
+    top:28vh;
+}
+
+#h1{
+    background-color: #fe8484;
+    border: 10px solid #fe8484;
+    height: 75px;
+    color: #ba090f;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1rem;
+    left: 1rem;
+    z-index: 1000;
+}
+
+#overview{
+    background-color: #c1dcfd;
+    border: 2px solid #c1dcfd;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#overview h2, #culture h2{
+    color: #2563eb;
+}
+
+
+#overview p{
+    font-size: 20px;
+}
+
+#facts{
+    background-color: #fcd34d;
+    border: 2px solid #fcd34d;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;      
+    line-height: 1.5;                                        
+}
+
+#facts h2, #lang h2 {
+    color: #d97706;
+}
+
+#national{
+    background-color: #6ee7b7;
+    border: 2px solid #6ee7b7;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.ns {
+    width: 18%;
+    height: 18%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+#cuisine{
+    background-color: #6ee7b7;
+    border: 2px solid #6ee7b7;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    bottom: 1rem;
+}
+
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+.card-container {
+    width: 20%;
+    height: 120px;
+    perspective: 800px;
+    margin: 0.5%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    transform-origin: center center; 
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+}
+
+.card-front {
+    background: #047857;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+#lang{
+    background-color: #fcd34d;
+    border: 2px solid #fcd34d;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;                                                 
+}
+
+#culture{
+    background-color: #c1dcfd;
+    border: 2px solid #c1dcfd;
+    border-radius: 10px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;    
+    line-height: 1.5;                                             
+}
+
+#cuisine h2, #national h2{
+    color: #047857;                                             
+}
